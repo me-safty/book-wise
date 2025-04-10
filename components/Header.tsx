@@ -20,16 +20,17 @@ export const Header: FC = () => {
       </Link>
       <ul className="flex flex-row items-center gap-8">
         {links.map((link) => (
-          <Link
-            className={cn(
-              "text-base cursor-pointer capitalize",
-              link.href === pathName ? "text-light-200" : "text-light-100"
-            )}
-            key={link.href}
-            href={link.href}
-          >
-            {link.label}
-          </Link>
+          <li key={link.href}>
+            <Link
+              className={cn(
+                "text-base cursor-pointer capitalize",
+                link.href === pathName ? "text-light-200" : "text-light-100"
+              )}
+              href={link.href}
+            >
+              {link.label}
+            </Link>
+          </li>
         ))}
       </ul>
     </header>
