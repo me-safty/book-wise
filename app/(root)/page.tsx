@@ -1,6 +1,12 @@
-import { Button } from "../../components/ui/button"
+import { BookList } from "../../components/BookList"
+import { BookOverview } from "../../components/BookOverview"
 const Home = () => {
-  return <Button>Button</Button>
+  return (
+    <>
+      <BookOverview />
+      <BookList />
+    </>
+  )
 }
 
 export default Home

@@ -4,7 +4,6 @@ import js from "@eslint/js"
 import { FlatCompat } from "@eslint/eslintrc"
 import unusedImports from "eslint-plugin-unused-imports"
 import reactCompiler from "eslint-plugin-react-compiler"
-import jsdoc from "eslint-plugin-jsdoc"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -26,17 +25,6 @@ export default [
     "plugin:react-hooks/recommended-legacy",
     "prettier"
   ),
-  jsdoc.configs["flat/recommended"],
-  // other configuration objects...
-  {
-    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-    plugins: {
-      jsdoc,
-    },
-    rules: {
-      "jsdoc/require-description": "warn",
-    },
-  },
   {
     plugins: {
       "unused-imports": unusedImports,
