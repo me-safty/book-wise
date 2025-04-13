@@ -7,7 +7,12 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
       <section className="auth-form">
         <div className="auth-box">
           <div className="flex flex-row gap-3">
-            <Image src="/icons/logo.svg" alt="logo" width={37} height={37} />
+            <Image
+              src="/icons/logo.svg"
+              alt="logo"
+              width={37}
+              height={37}
+            />
             <h1 className="text-2xl font-semibold text-white">BookWise</h1>
           </div>
           {children}
@@ -17,6 +22,8 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
         <Image
           src="/images/books.jpg"
           alt="auth illustration"
+          quality={60}
+          loading="lazy"
           height={1000}
           width={1000}
           className="size-full object-cover"
