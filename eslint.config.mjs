@@ -18,10 +18,10 @@ export default [
   ...compat.extends(
     "next/core-web-vitals",
     "next/typescript",
-    "eslint:recommended",
     "plugin:react/recommended",
+    // "eslint:recommended",
     // "plugin:tailwindcss/recommended",
-    // "plugin:react-hooks/recommended-legacy",
+    "plugin:react-hooks/recommended-legacy",
     "prettier"
   ),
   {

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { FC } from "react"
 import { cn } from "../lib/utils"
 import { BookCoverSvg } from "./BookCoverSvg"
@@ -24,14 +23,14 @@ interface BookCoverProps {
   className?: string
   variant?: BookCoverVariant
   coverColor: string
-  coverImage: string
+  coverUrl: string
 }
 
 export const BookCover: FC<BookCoverProps> = ({
   className,
   variant = BookCoverVariant.Regular,
   coverColor = "#012B48",
-  coverImage = "https://placehold.co/400x600",
+  coverUrl = "https://placehold.co/400x600",
 }) => {
   return (
     <div
@@ -46,7 +45,12 @@ export const BookCover: FC<BookCoverProps> = ({
         className="absolute z-10"
         style={{ left: "12%", width: "87.5%", height: "88%" }}
       >
-        <Image src={coverImage} fill alt="book cover" />
+        <Image
+          className="select-none"
+          src={coverUrl}
+          fill
+          alt="book cover"
+        />
       </div>
     </div>
   )

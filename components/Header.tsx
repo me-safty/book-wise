@@ -15,7 +15,12 @@ export const Header: FC = () => {
   return (
     <header className="my-10 flex justify-center gap-5">
       <Link href="/">
-        <Image src="/icons/logo.svg" alt="BookWise" width={40} height={40} />
+        <Image
+          src="/icons/logo.svg"
+          alt="BookWise"
+          width={40}
+          height={40}
+        />
       </Link>
       <ul className="flex flex-row items-center gap-8">
         {links.map((link) => (

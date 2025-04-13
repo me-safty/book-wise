@@ -9,5 +9,6 @@
   "endOfLine": "lf",
   "operatorLinebreak": "before",
   "jsxSingleQuote": false,
-  "bracketSameLine": false
+  "bracketSameLine": false,
+  "singleAttributePerLine": true
 }

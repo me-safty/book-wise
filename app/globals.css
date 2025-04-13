@@ -100,8 +100,6 @@
     @apply w-full min-h-14 border-none text-base font-bold placeholder:font-normal text-white placeholder:text-light-100 focus-visible:ring-0 focus-visible:shadow-none bg-dark-300;
   }
 
-  /* Additional component styles */
-
   /* Book Card */
   .book-title {
     @apply mt-2 line-clamp-1 text-base font-semibold text-white xs:text-xl;

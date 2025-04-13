@@ -5,7 +5,10 @@ const Home = () => {
   return (
     <>
       <BookOverview {...sampleBooks[0]} />
-      <BookList />
+      <BookList
+        books={sampleBooks}
+        title="Latest Books"
+      />
     </>
   )
 }

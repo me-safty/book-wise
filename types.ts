@@ -11,7 +11,8 @@ export interface Book {
   coverUrl: string
   videoUrl: string
   summary: string
-  createdAt: Date | null
+  createdAt?: Date | null
+  isLoanedBook?: boolean
 }
 
 export interface AuthCredentials {
