@@ -50,7 +50,7 @@ export const FIELD_NAMES: Record<string, string> = {
   universityCard: "Upload University ID Card",
 }
 
-export const FIELD_TYPES = {
+export const FIELD_TYPES: Record<string, string> = {
   fullname: "text",
   email: "email",
   universityId: "number",

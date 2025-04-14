@@ -191,7 +191,7 @@
   }
 
   .upload-filename {
-    @apply mt-1 text-center text-xs;
+    @apply mt-1 text-xs;
   }
 
   .progress {

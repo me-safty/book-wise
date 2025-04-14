@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "../ui/input"
 import Link from "next/link"
-import { FIELD_NAMES } from "../../constants"
+import { FIELD_NAMES, FIELD_TYPES } from "../../constants"
 import { UploadImage } from "./UploadImage"
 
 export enum FormType {
@@ -67,7 +67,7 @@ export const AuthForm = <T extends FieldValues>({
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmitHandler)}
-          className="space-y-6 gap-4"
+          className="space-y-6 w-full"
         >
           {Object.keys(defaultValues).map((name) => (
             <FormField
@@ -81,11 +81,12 @@ export const AuthForm = <T extends FieldValues>({
                   </FormLabel>
                   <FormControl>
                     {name === "universityCard" ? (
-                      <UploadImage />
+                      <UploadImage onFileChange={field.onChange} />
                     ) : (
                       <Input
                         className="form-input"
-                        type={name}
+                        required
+                        type={FIELD_TYPES[name]}
                         {...field}
                       />
                     )}
@@ -99,7 +100,7 @@ export const AuthForm = <T extends FieldValues>({
             className="form-btn"
             type="submit"
           >
-            Submit
+            {isLogin ? "Login" : "Sign Up"}
           </Button>
           <p className="text-center text-base font-medium">
             {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
