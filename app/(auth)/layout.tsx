@@ -24,10 +24,9 @@ const Layout: FC<PropsWithChildren> = async ({ children }) => {
       </section>
       <section className="auth-illustration">
         <Image
-          src="/images/books.jpg"
+          src="/images/books-l.jpeg"
           alt="auth illustration"
-          quality={60}
-          loading="lazy"
+          quality={65}
           height={1000}
           width={1000}
           className="size-full object-cover"
