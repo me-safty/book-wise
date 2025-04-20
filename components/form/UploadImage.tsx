@@ -1,9 +1,9 @@
 "use client"
 
-import { FC, useRef, useState } from "react"
+import { FC, MouseEvent, useRef, useState } from "react"
 import { Image as IKImage } from "@imagekit/next"
 import { cn } from "../../lib/utils"
-import { config } from "../../config"
+import { config } from "../../lib/config"
 import { toast } from "sonner"
 import { handleUpload } from "../../lib/imagekit"
 import Image from "next/image"
@@ -28,7 +28,7 @@ export const UploadImage: FC<UploadImageProps> = ({
     placeholder: variant === "dark" ? "text-light-100" : "text-slate-500",
     text: variant === "dark" ? "text-light-100" : "text-dark-400",
   }
-  const handleUploadBtnClick = (e: React.MouseEvent) => {
+  const handleUploadBtnClick = (e: MouseEvent) => {
     e.preventDefault()
     if (fileInputRef.current) fileInputRef.current.click()
   }

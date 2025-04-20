@@ -1,4 +1,4 @@
-import { config } from "../../../../config"
+import { config } from "../../../../lib/config"
 import { getUploadAuthParams } from "@imagekit/next/server"
 
 const { publicKey, privateKey } = config.env.imageKit

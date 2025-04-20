@@ -43,7 +43,7 @@ export const adminSideBarLinks = [
 ]
 
 export const FIELD_NAMES: Record<string, string> = {
-  fullname: "Full name",
+  fullName: "Full name",
   email: "Email",
   universityId: "University ID Number",
   password: "Password",
@@ -51,7 +51,7 @@ export const FIELD_NAMES: Record<string, string> = {
 }
 
 export const FIELD_TYPES: Record<string, string> = {
-  fullname: "text",
+  fullName: "text",
   email: "email",
   universityId: "number",
   password: "password",

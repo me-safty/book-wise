@@ -22,6 +22,8 @@ import { Input } from "../ui/input"
 import Link from "next/link"
 import { FIELD_NAMES, FIELD_TYPES } from "../../constants"
 import { UploadImage } from "./UploadImage"
+import { toast } from "sonner"
+import { useRouter } from "next/navigation"
 
 export enum FormType {
   Login,
@@ -41,15 +43,25 @@ export const AuthForm = <T extends FieldValues>({
   schema,
   onSubmit,
 }: AuthFormProps<T>) => {
+  const router = useRouter()
   const isLogin = type === FormType.Login
   const form: UseFormReturn<T> = useForm({
     resolver: zodResolver(schema),
     defaultValues: defaultValues as DefaultValues<T>,
   })
   const onSubmitHandler: SubmitHandler<T> = async (data) => {
-    const { success, error } = await onSubmit(data)
-    if (success) {
-      // redirect to dashboard
+    const result = await onSubmit(data)
+    if (result.success) {
+      toast.success("Success", {
+        description: isLogin
+          ? "You have successfully logged in"
+          : "You have successfully signed up",
+      })
+      router.push("/")
+    } else {
+      toast.error(`Error ${isLogin ? "logging in" : "signing up"}`, {
+        description: result.error,
+      })
     }
   }
   return (

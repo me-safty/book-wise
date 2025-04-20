@@ -1,5 +1,6 @@
 "use client"
 import { AuthForm, FormType } from "../../../components/form/AuthForm"
+import { signInWithCredentials } from "../../../lib/actions/auth"
 import { loginSchema } from "../../../lib/validation"
 
 export default function Page() {
@@ -11,7 +12,7 @@ export default function Page() {
         password: "",
       }}
       schema={loginSchema}
-      onSubmit={() => {}}
+      onSubmit={signInWithCredentials}
     />
   )
 }

@@ -1,6 +1,7 @@
 "use client"
 
 import { AuthForm, FormType } from "../../../components/form/AuthForm"
+import { signUp } from "../../../lib/actions/auth"
 import { signupSchema } from "../../../lib/validation"
 
 export default function Page() {
@@ -9,13 +10,13 @@ export default function Page() {
       type={FormType.Signup}
       defaultValues={{
         email: "",
-        fullname: "",
+        fullName: "",
         universityId: 0,
         password: "",
         universityCard: "",
       }}
       schema={signupSchema}
-      onSubmit={() => {}}
+      onSubmit={signUp}
     />
   )
 }

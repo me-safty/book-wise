@@ -34,7 +34,7 @@ export const BookOverview: FC<Book> = ({
               alt="Star"
             />
             <p>
-              <span className="text-light-200 text-semibold">{rating}</span>/5
+              <span className="text-light-200 text-semibold">{rating}</span>
             </p>
           </div>
         </div>
